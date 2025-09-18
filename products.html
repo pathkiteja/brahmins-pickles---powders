@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Brahmins Pickles & Powders</title>
+    <meta name="description" content="Explore our complete menu of authentic Indian chapathis, pickles, and spice powders. Fresh daily preparations with traditional recipes.">
+    <meta name="keywords" content="chapathi, pickles, powders, Indian food, authentic, traditional, takeaway">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='80'>🍛</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img src="assets/logo.jpg" alt="Brahmins Logo" class="loading-logo">
+            <div class="loading-text">Loading...</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.jpg" alt="Brahmins Logo" class="logo-img">
+                <div class="brand-name">Brahmins Pickles & Powders</div>
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                </ul>
+                
+                <button class="theme-toggle" id="themeToggle">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content liquid-loading">
+            <h1>Our Complete Menu</h1>
+            <p class="subtitle">Authentic Indian Delicacies</p>
+            <p class="tagline">Fresh daily preparations • Traditional recipes • Premium quality</p>
+        </div>
+    </section>
+
+    <!-- Chapathis Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">🫓 Fresh Chapathis</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem;">
+                Soft, fresh chapathis made daily with premium ingredients
+            </p>
+            
+            <div class="products-grid">
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Alu Paratha" data-product-price="40">
+                    <h3>Alu Paratha</h3>
+                    <p class="price">₹40</p>
+                    <p>Delicious potato-stuffed flatbread, perfectly spiced and freshly prepared</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Palakura Chapath" data-product-price="20">
+                    <h3>Palakura Chapath</h3>
+                    <p class="price">₹20</p>
+                    <p>Nutritious spinach chapathi with authentic flavors and healthy greens</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Thotakura Chapathi" data-product-price="20">
+                    <h3>Thotakura Chapathi</h3>
+                    <p class="price">₹20</p>
+                    <p>Traditional amaranth leaves chapathi, rich in nutrients and taste</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Ghee Chapathi" data-product-price="20">
+                    <h3>Ghee Chapathi</h3>
+                    <p class="price">₹20</p>
+                    <p>Classic chapathi made with pure ghee for an authentic, rich flavor</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Chapathi" data-product-price="15">
+                    <h3>Chapathi</h3>
+                    <p class="price">₹15</p>
+                    <p>Traditional plain chapathi, soft and perfect for any meal</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Pulka" data-product-price="15">
+                    <h3>Pulka</h3>
+                    <p class="price">₹15</p>
+                    <p>Light and fluffy puffed bread, ideal with curries and vegetables</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Menthi Chapathi" data-product-price="20">
+                    <h3>Menthi Chapathi</h3>
+                    <p class="price">₹20</p>
+                    <p>Aromatic fenugreek chapathi with distinctive flavor and health benefits</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Veg Maggies" data-product-price="120">
+                    <h3>Veg Maggies</h3>
+                    <p class="price">₹120</p>
+                    <p>Special vegetable noodles prepared with authentic Indian spices</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="chapathi" data-product-name="Bakshalu" data-product-price="50">
+                    <h3>Bakshalu</h3>
+                    <p class="price">₹50</p>
+                    <p>Sweet traditional flatbread stuffed with jaggery and nuts</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pickles Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">🥒 Premium Pickles</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 1rem; font-size: 1.1rem;">
+                Traditional pickles made with authentic recipes and premium ingredients
+            </p>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.2rem; font-weight: 600;">
+                Available in multiple sizes - Click any pickle to select weight
+            </p>
+            
+            <div class="products-grid">
+                <div class="product-card scroll-reveal" data-product-type="pickle" data-product-name="Tomato Pachadi">
+                    <h3>Tomato Pachadi</h3>
+                    <p>Tangy and spicy tomato pickle with traditional South Indian flavors</p>
+                    <p class="price-range">₹140 - ₹550</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick pickle-variant" data-action="select-variant">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="pickle" data-product-name="Gongura Pachadi">
+                    <h3>Gongura Pachadi</h3>
+                    <p>Classic Andhra-style sorrel leaves pickle with authentic taste</p>
+                    <p class="price-range">₹140 - ₹550</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick pickle-variant" data-action="select-variant">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="pickle" data-product-name="Chintakaya Pachadi">
+                    <h3>Chintakaya Pachadi</h3>
+                    <p>Traditional tamarind pickle with perfect blend of spices</p>
+                    <p class="price-range">₹140 - ₹550</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick pickle-variant" data-action="select-variant">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="pickle" data-product-name="Allam Pachadi">
+                    <h3>Allam Pachadi</h3>
+                    <p>Zesty ginger pickle with aromatic spices and authentic preparation</p>
+                    <p class="price-range">₹140 - ₹550</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick pickle-variant" data-action="select-variant">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="pickle" data-product-name="Nimmakaya Nilva Pachadi">
+                    <h3>Nimmakaya Nilva Pachadi</h3>
+                    <p>Lemon pickle with perfect balance of sourness and spices</p>
+                    <p class="price-range">₹140 - ₹550</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick pickle-variant" data-action="select-variant">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="pickle" data-product-name="Avakaya Pachadi">
+                    <h3>Avakaya Pachadi</h3>
+                    <p>Famous Andhra mango pickle with traditional recipe and bold flavors</p>
+                    <p class="price-range">₹140 - ₹550</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick pickle-variant" data-action="select-variant">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="pickle" data-product-name="Usirikaya Pachadi">
+                    <h3>Usirikaya Pachadi</h3>
+                    <p>Gooseberry pickle rich in vitamin C and traditional taste</p>
+                    <p class="price-range">₹140 - ₹550</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick pickle-variant" data-action="select-variant">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="pickle" data-product-name="Pandu Mirapakaya Pachadi">
+                    <h3>Pandu Mirapakaya Pachadi</h3>
+                    <p>Ripe red chili pickle with authentic spice blend</p>
+                    <p class="price-range">₹140 - ₹550</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick pickle-variant" data-action="select-variant">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal">
+                    <h3>Pachi Mirapakaya Pachadi</h3>
+                    <p>Fresh green chili pickle with traditional preparation methods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Powders Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">🌶️ Aromatic Spice Powders</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 1rem; font-size: 1.1rem;">
+                Premium quality spice powders made with traditional methods
+            </p>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.2rem; font-weight: 600;">
+                ₹800 per kg
+            </p>
+            
+            <div class="products-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                <div class="product-card scroll-reveal" data-product-type="powder" data-product-name="Charu Powder" data-product-price="800">
+                    <h3>Charu Powder</h3>
+                    <p>Traditional spice blend perfect for South Indian rasam. Made with carefully selected spices, roasted to perfection for authentic flavor and aroma.</p>
+                    <p class="price">₹800 per kg</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card scroll-reveal" data-product-type="powder" data-product-name="Kandi Powder" data-product-price="800">
+                    <h3>Kandi Powder</h3>
+                    <p>Premium dal powder blend ideal for traditional sambar and dal preparations. Rich in flavor with perfect spice balance for authentic taste.</p>
+                    <p class="price">₹800 per kg</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart-quick" data-action="add">
+                            <span class="plus-icon">+</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Takeaway Information -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-card scroll-reveal" style="text-align: center; padding: 3rem;">
+                <h2 style="color: var(--text-primary); margin-bottom: 2rem; font-size: 2rem;">🚀 Takeaway Available</h2>
+                <p style="color: var(--text-secondary); font-size: 1.3rem; margin-bottom: 2rem; font-weight: 600;">
+                    Order 1 Hour in Advance
+                </p>
+                <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                    All our products are freshly prepared daily. To ensure the best quality and availability, 
+                    please call us at least 1 hour before pickup. This allows us to prepare your order fresh 
+                    and have it ready exactly when you need it.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 1rem;">📞 Phone Orders</h4>
+                        <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">9182002644</p>
+                        <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-primary);">6281753613</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 1rem;">⏰ Operating Hours</h4>
+                        <p style="color: var(--text-muted);">Daily Fresh Preparations</p>
+                        <p style="color: var(--text-muted);">Call for availability</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Place Your Order</h2>
+            
+            <div class="glass-card scroll-reveal" style="text-align: center;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 2rem; color: var(--text-primary);">Ready to Experience Authentic Flavors?</h3>
+                
+                <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">
+                    Call us to place your order and experience the authentic taste of traditional Indian cuisine. 
+                    Our team will be happy to help you select the perfect combination of chapathis, pickles, and powders.
+                </p>
+                
+                <div style="margin: 2rem 0;">
+                    <a href="tel:9182002644" class="liquid-button" style="margin: 0.5rem;">📞 Call 9182002644</a>
+                    <a href="tel:6281753613" class="liquid-button" style="margin: 0.5rem;">📞 Call 6281753613</a>
+                </div>
+                
+                <p style="color: var(--text-muted); font-style: italic; margin-top: 2rem;">
+                    "Taste the tradition, savor the authenticity"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Variant Popup -->
+    <div id="productPopup" class="product-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 id="popupProductName">Select Size</h3>
+                <button class="popup-close" id="closePopup">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="variant-options">
+                    <div class="variant-option" data-weight="250" data-price="140">
+                        <div class="variant-info">
+                            <span class="variant-weight">250gm</span>
+                            <span class="variant-price">₹140</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <div class="variant-option" data-weight="500" data-price="275">
+                        <div class="variant-info">
+                            <span class="variant-weight">500gm</span>
+                            <span class="variant-price">₹275</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <div class="variant-option" data-weight="1000" data-price="550">
+                        <div class="variant-info">
+                            <span class="variant-weight">1000gm</span>
+                            <span class="variant-price">₹550</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    
+
+    <!-- Cart Overlay -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- Advanced Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h3>🛒 Your Cart</h3>
+            <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+        </div>
+        <div class="cart-sidebar-body" id="cartSidebarBody">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="cart-summary-mini">
+                <div class="summary-row">
+                    <span>Total Items:</span>
+                    <span id="sidebarTotalItems">0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="sidebarTotal">₹0</span>
+                </div>
+                <div class="cart-actions" style="margin-top: 1rem;">
+                    <button class="liquid-button" style="width: 100%; margin-bottom: 0.5rem;" onclick="window.location.href='cart.html'">View Full Cart</button>
+                    <button class="liquid-button primary" style="width: 100%;" id="sidebarCheckoutBtn">Quick Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
