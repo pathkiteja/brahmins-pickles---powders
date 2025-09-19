@@ -57,9 +57,38 @@
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                    <li class="settings-menu">
+                        <button class="settings-button" id="settingsButton">
+                            <span class="settings-icon">⚙️</span>
+                            <span class="settings-text">Settings</span>
+                        </button>
+                        <div class="settings-dropdown" id="settingsDropdown">
+                            <div class="settings-section">
+                                <h4>Theme</h4>
+                                <button class="theme-toggle-setting" id="themeToggleSetting">
+                                    <span class="theme-icon" id="themeIconSetting">🌙</span>
+                                    <span class="theme-text" id="themeTextSetting">Dark Mode</span>
+                                </button>
+                            </div>
+                            <div class="settings-divider"></div>
+                            <div class="settings-section">
+                                <h4>Account</h4>
+                                <a href="login.html" class="settings-item">
+                                    <span>🔐</span> Login
+                                </a>
+                                <a href="signup.html" class="settings-item">
+                                    <span>📝</span> Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 
-                <button class="theme-toggle" id="themeToggle">
+                <button class="theme-toggle" id="themeToggle" style="display: none;">
                     <span id="themeIcon">🌙</span>
                 </button>
             </div>
@@ -273,6 +302,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be populated here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: ₹<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+    
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>

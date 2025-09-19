@@ -45,9 +45,34 @@
                         <span class="cart-icon">🛒</span>
                         <span class="cart-count" id="cartCount">0</span>
                     </a></li>
+                    <li class="settings-menu">
+                        <button class="settings-button" id="settingsButton">
+                            <span class="settings-icon">⚙️</span>
+                            <span class="settings-text">Settings</span>
+                        </button>
+                        <div class="settings-dropdown" id="settingsDropdown">
+                            <div class="settings-section">
+                                <h4>Theme</h4>
+                                <button class="theme-toggle-setting" id="themeToggleSetting">
+                                    <span class="theme-icon" id="themeIconSetting">🌙</span>
+                                    <span class="theme-text" id="themeTextSetting">Dark Mode</span>
+                                </button>
+                            </div>
+                            <div class="settings-divider"></div>
+                            <div class="settings-section">
+                                <h4>Account</h4>
+                                <a href="login.html" class="settings-item">
+                                    <span>🔐</span> Login
+                                </a>
+                                <a href="signup.html" class="settings-item">
+                                    <span>📝</span> Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 
-                <button class="theme-toggle" id="themeToggle">
+                <button class="theme-toggle" id="themeToggle" style="display: none;">
                     <span id="themeIcon">🌙</span>
                 </button>
             </div>
@@ -137,6 +162,36 @@
                     <div>
                         <a href="tel:9182002644" class="liquid-button" style="margin: 0.5rem;">📞 Call Now</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- Advanced Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h3>🛒 Your Cart</h3>
+            <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+        </div>
+        <div class="cart-sidebar-body" id="cartSidebarBody">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="cart-summary-mini">
+                <div class="summary-row">
+                    <span>Total Items:</span>
+                    <span id="sidebarTotalItems">0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="sidebarTotal">₹0</span>
+                </div>
+                <div class="cart-actions" style="margin-top: 1rem;">
+                    <button class="liquid-button" style="width: 100%; margin-bottom: 0.5rem;" onclick="window.location.href='cart.html'">View Full Cart</button>
+                    <button class="liquid-button primary" style="width: 100%;" id="sidebarCheckoutBtn">Quick Order</button>
                 </div>
             </div>
         </div>

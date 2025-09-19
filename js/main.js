@@ -20,6 +20,7 @@ class LiquidGlassWebsite {
         this.setupCartFunctionality();
         this.setupAdvancedCart();
         this.updateCartDisplay();
+        this.setupSettingsMenu();
     }
 
     // Loading Screen Functionality
@@ -609,6 +610,72 @@ class LiquidGlassWebsite {
         if (themeIcon) {
             themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
         }
+        
+        // Update settings dropdown theme icon and text
+        const themeIconSetting = document.getElementById('themeIconSetting');
+        const themeTextSetting = document.getElementById('themeTextSetting');
+        if (themeIconSetting) {
+            themeIconSetting.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+        if (themeTextSetting) {
+            themeTextSetting.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+        }
+    }
+
+    // Settings Menu Functionality
+    setupSettingsMenu() {
+        const settingsButton = document.getElementById('settingsButton');
+        const settingsDropdown = document.getElementById('settingsDropdown');
+        const themeToggleSetting = document.getElementById('themeToggleSetting');
+        
+        if (!settingsButton || !settingsDropdown) return;
+
+        // Toggle settings dropdown
+        settingsButton.addEventListener('click', () => {
+            settingsDropdown.classList.toggle('show');
+            
+            // Add animation
+            settingsButton.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                settingsButton.style.transform = 'scale(1)';
+            }, 150);
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!settingsButton.contains(e.target) && !settingsDropdown.contains(e.target)) {
+                settingsDropdown.classList.remove('show');
+            }
+        });
+
+        // Theme toggle in settings
+        if (themeToggleSetting) {
+            themeToggleSetting.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                this.updateThemeIcon(newTheme);
+                
+                // Add animation
+                themeToggleSetting.style.transform = 'scale(0.95) rotate(180deg)';
+                setTimeout(() => {
+                    themeToggleSetting.style.transform = 'scale(1) rotate(0deg)';
+                }, 300);
+            });
+        }
+
+        // Initialize theme display
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        this.updateThemeIcon(savedTheme);
+
+        // ESC key to close settings
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && settingsDropdown.classList.contains('show')) {
+                settingsDropdown.classList.remove('show');
+            }
+        });
     }
 
     // Scroll Reveal Animation

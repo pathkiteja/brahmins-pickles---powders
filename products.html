@@ -46,9 +46,34 @@
                         <span class="cart-icon">🛒</span>
                         <span class="cart-count" id="cartCount">0</span>
                     </a></li>
+                    <li class="settings-menu">
+                        <button class="settings-button" id="settingsButton">
+                            <span class="settings-icon">⚙️</span>
+                            <span class="settings-text">Settings</span>
+                        </button>
+                        <div class="settings-dropdown" id="settingsDropdown">
+                            <div class="settings-section">
+                                <h4>Theme</h4>
+                                <button class="theme-toggle-setting" id="themeToggleSetting">
+                                    <span class="theme-icon" id="themeIconSetting">🌙</span>
+                                    <span class="theme-text" id="themeTextSetting">Dark Mode</span>
+                                </button>
+                            </div>
+                            <div class="settings-divider"></div>
+                            <div class="settings-section">
+                                <h4>Account</h4>
+                                <a href="login.html" class="settings-item">
+                                    <span>🔐</span> Login
+                                </a>
+                                <a href="signup.html" class="settings-item">
+                                    <span>📝</span> Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 
-                <button class="theme-toggle" id="themeToggle">
+                <button class="theme-toggle" id="themeToggle" style="display: none;">
                     <span id="themeIcon">🌙</span>
                 </button>
             </div>
